@@ -1,6 +1,6 @@
 import { getLocalStorage, setLocalStorage } from './localStorage.js';
 
-const completedTask = ({task, desc, tasks}) => {
+const completedTask = ({ task, desc, tasks }) => {
   if (task.complete === true) {
     desc.classList.remove('checked');
     task.complete = false;
