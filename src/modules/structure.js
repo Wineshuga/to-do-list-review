@@ -61,7 +61,7 @@ const populateTasks = () => {
   checkBox.forEach((checkBox, index) => {
     checkBox.addEventListener('change', () => {
       const taskText = document.querySelectorAll('.desc')[index];
-      completedTask({tasks[index], taskText, tasks});
+      completedTask({ tasks, taskText, tasks });
     });
   });
   if (tasks.length > 0) {
