@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+main {
+  background-color: #fff;
+  width: 90%;
+}
+
+.main--header {
+  padding: 1rem;
+}
+
+.main--header,
+.add-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-task {
+  border-bottom: 1px solid bisque;
+  border-top: 1px solid bisque;
+  padding-right: 1rem;
+}
+
+.add-task input {
+  width: 85%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+}
+
+.list--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid bisque;
+  padding: 1rem;
+}
+
+.edit--form input {
+  border: none;
+  padding: 0.3rem;
+  outline: none;
+  width: 25rem;
+  background-color: inherit;
+}
+
+.list--item:last-child {
+  border-bottom: none;
+}
+
+.list--item.about--to--edit {
+  background-color: rgba(255, 255, 0, 0.37);
+}
+
+.edit--form {
+  display: none;
+}
+
+.fa-trash-can {
+  display: none;
+}
+
+.list--item.about--to--edit .edit--form {
+  display: block;
+}
+
+.list--item.about--to--edit .desc {
+  display: none;
+}
+
+.list--item.about--to--edit .fa-trash-can {
+  display: block;
+}
+
+.list--item.about--to--edit .fa-ellipsis-vertical {
+  display: none;
+}
+
+.desc--container {
+  display: flex;
+  gap: 1rem;
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.fa-solid {
+  cursor: pointer;
+  color: gray;
+}
+
+.button > input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: #fff;
+  border-top: 1px solid bisque;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 500px;
+  }
+}
