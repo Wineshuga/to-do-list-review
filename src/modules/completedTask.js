@@ -1,6 +1,6 @@
 import { getLocalStorage, setLocalStorage } from './localStorage.js';
 
-const completedTask = (task, desc, tasks) => {
+const completedTask = ({ task, desc }) => {
   if (task.complete === true) {
     desc.classList.remove('checked');
     task.complete = false;
@@ -8,7 +8,7 @@ const completedTask = (task, desc, tasks) => {
     desc.classList.add('checked');
     task.complete = true;
   }
-  setLocalStorage(tasks);
+  setLocalStorage(task);
 };
 
 const updateTask = (tasks) => {
